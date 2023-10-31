@@ -38,30 +38,6 @@ function App() {
     setPets(updatedPets);
   }
 
-  const updateFiltersType = (type) => {
-    setFilters({type: type});
-  };
-
-  const onFindPetsClick = async () =>{
-    let petsUrl = 'http://localhost:3000/pets';
-
-    if (filters.type !== "all") {
-      petsUrl += `?type=${filters.type}`;
-    }
-    const response = await fetch(petsUrl);
-    const petsData = await response.json();
-
-    setPets(petsData);
-  };
-
-  const onAdoptPet = (id) => {
-    const updateAdoptedPets = pets.map((pet) => {
-      return pets.id === id ? {...pet, isAdopted: true} : pet;
-    });
-    setPets(updateAdoptedPets);
-
-  };
-
   return (
     <div className="ui container">
       <header>

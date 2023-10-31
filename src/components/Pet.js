@@ -11,13 +11,11 @@ const Pet = ({pet, onAdoptPet}) => {
         </span>
         <div className="meta">
           <span className="date">{type}</span>
-          <span className="date">{type}</span>
         </div>
         <div className="description">
           <p>Age: {age}</p>
           <p>Weight: {weight}</p>
-          <p>Age: {age}</p>
-          <p>Weight: {weight}</p>
+
         </div>
       </div>
       <div className="extra content">
